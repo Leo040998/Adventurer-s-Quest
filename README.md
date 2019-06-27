@@ -23,3 +23,9 @@ Clicar na opção: <Começar a Aventura> para iniciar o jogo
 Clicar na opção: <Sair> para sair do jogo.
   
   gcc main.c -o game -lcurses; para montar um executável que já estará disponível na pasta bin <game>.
+  
+    * UNIVERSIDADE FEDERAL DE SANTA CATARINA
+    * Marielly Silva Alberti,   17150212.
+    * Leonardo Nunes Rodrigues, 17250488.
+    * Projeto: Adventurer's Quest.
+    
