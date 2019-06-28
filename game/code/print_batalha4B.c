@@ -1,0 +1,68 @@
+/* UNIVERSIDADE FEDERAL DE SANTA CATARINA
+ * Marielly Silva Alberti,   17150212.
+ * Leonardo Nunes Rodrigues, 17250488.
+ * Projeto: Adventurer's Quest.
+ */
+
+
+#include "../header/game.h"
+
+void print_batalha4B(int movimento_opcao, int resultado_player, int resultado_inimigo){
+    clear();
+    box(stdscr,58,92);
+    move(2,1);
+    hline(0,10);
+    mvprintw(1,2,"Batalha");
+    mvprintw(4,65,"Fenix = %d",vida_inimigo_atual);
+    mvprintw(4,25, "         /|                           /| /|          ");
+    mvprintw(5,25, "        | |/|    /|      _A_   /|    / |/ |/|        ");
+    mvprintw(6,25, "    *   |   |/| / | /|  {0'0} / |/| /  |  | |      * ");
+    mvprintw(7,25, "     *  |     |/  |/ |___| |_/    |/        |     *  ");
+    mvprintw(8,25, "   *    |/|                                 /    *   ");
+    mvprintw(9,25, "    *     |/|    |                    |    /      *  ");
+    mvprintw(10,25,"    *       |/| /|     /|     /|     /|   /   *      ");
+    mvprintw(11,25,"              |/ |/|/|/ |/|/|/ |/|/|/ |/|/           ");
+    mvprintw(11,4,"    * * *        ___    ");
+    mvprintw(12,4,"   * /| *     * |*_*| * ");
+    mvprintw(13,4,"  * / | *    * *|_*_|* *");
+    mvprintw(14,4,"  * | | *     * |*_*| * ");
+    mvprintw(15,4,"  * | | *        |_|    ");
+    mvprintw(16,4,"  |_|_|_|        |_|    ");
+    mvprintw(17,4,"  '|_ _|'        |_|    ");
+    mvprintw(18,4,"    |_|          |_|    ");
+    mvprintw(20,4,"  Karthos = %d Tharkun = %d  ",vida_player_atual,vida_player_atual);
+    mvprintw(17,70,"1 - Ataque");
+    mvprintw(18,70,"2 - Defesa");
+    if(movimento_opcao == 0){
+        mvprintw(17,66, "-->");
+        refresh();
+    }
+    if(movimento_opcao == 1){
+        mvprintw(18,66,"-->");
+        refresh();
+    }
+    if(resultado_player == 1){
+        mvprintw(14,55,"Party errou o ataque");
+    }
+    else if(resultado_player == 10){
+        mvprintw(14,55,"Party atacou com sucesso");
+    }
+    else if(resultado_player == 2){
+        mvprintw(14,55,"Party errou a defesa");
+    }
+    else if(resultado_player == 20){
+        mvprintw(14,55,"Party defendeu com sucesso");
+    }
+    if(resultado_inimigo == 1){
+        mvprintw(15,55,"Inimigo errou o ataque");
+    }
+    else if(resultado_inimigo == 10){
+        mvprintw(15,55,"Inimigo atacou com sucesso");
+    }
+    else if(resultado_inimigo == 2){
+        mvprintw(15,55,"Inimigo errou a defesa");
+    }
+    else if(resultado_inimigo == 20){
+        mvprintw(15,55,"Inimigo defendeu com sucesso");
+    }
+}

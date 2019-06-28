@@ -167,4 +167,8 @@
     
     void Pg_Fim_de_Jogo();
     
+    int v, pag_atual, movimento_opcao, vida_player, vida_inimigo, vida_inimigo_atual, vida_player_atual, acao_inimigo, resultado_inimigo, resultado_player;
+    
+    bool player_dead;
+    
 #endif
